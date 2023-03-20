@@ -7,6 +7,11 @@ ini_set('display_errors', 1);
 
 use proj4php\Wkt;
 
+if (!class_exists('\PHPUnit_Framework_TestCase') && class_exists('\PHPUnit\Framework\TestCase')) {
+	class_alias('\PHPUnit\Framework\TestCase', '\PHPUnit_Framework_TestCase');
+}
+
+#[\AllowDynamicProperties]
 class WktParserTest extends PHPUnit_Framework_TestCase
 {
     protected $onlyTestTheseProjections=null;//'SR-ORG:8177';//array('EPSG:32040', 'EPSG:31370'); // uncomment or comment this to test all, one or some projections.
