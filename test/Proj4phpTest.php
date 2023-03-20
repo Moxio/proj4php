@@ -18,6 +18,7 @@ class Proj4phpTest extends PHPUnit_Framework_TestCase
 {
     public function testIssue87()
     {
+		$this->expectNotToPerformAssertions();
 	$proj4 = new Proj4php();
 
 	$proj4->addDef("LONG_LAT", '+proj=longlat +ellps=WGS84 +datum=WGS84'); 
@@ -40,6 +41,7 @@ class Proj4phpTest extends PHPUnit_Framework_TestCase
 
     public function testTransform()
     {
+		$this->expectNotToPerformAssertions();
         $proj4     = new Proj4php();
 
         $projL93   = new Proj('EPSG:2154', $proj4);
@@ -212,6 +214,7 @@ class Proj4phpTest extends PHPUnit_Framework_TestCase
      */
      public function testParseInlineProj4Code()
      {
+		$this->expectNotToPerformAssertions();
         $proj4 = new Proj4php();
         $proj4->addDef("EPSG:27700",'+proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 +x_0=400000 +y_0=-100000 +ellps=airy +datum=OSGB36 +units=m +no_defs');
 
