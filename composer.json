@@ -1,6 +1,7 @@
 {
-    "name": "proj4php/proj4php",
+    "name": "moxio/proj4php",
     "license": "LGPL-2.1",
+    "version": "3.0.0",
     "type": "library",
     "description": "A PHP-Class for geographic coordinates transformation using proj4 definitions, thanks to a translation from Proj4JS",
     "keywords": [
