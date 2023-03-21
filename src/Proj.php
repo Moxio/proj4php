@@ -375,7 +375,7 @@ class Proj
         }
 
         // The class name for the projection code
-        $classname = '\\proj4php\\projCode\\' . ucfirst($projName);
+        $classname = '\\proj4php\\projCode\\' . ucfirst($projName ?? "");
 
         if (class_exists($classname)) {
             // Instantiate the class then store it in the global static (for now) $prog array.
