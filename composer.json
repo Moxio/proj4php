@@ -1,15 +1,17 @@
 {
     "name": "moxio/proj4php",
     "license": "LGPL-2.1",
-    "version": "3.0.0",
     "type": "library",
-    "description": "A PHP-Class for geographic coordinates transformation using proj4 definitions, thanks to a translation from Proj4JS",
+    "description": "A Fork of the proj4php project, patched to not create any php 8.2 deprecation warnings",
     "keywords": [
         "geographic",
         "coordinates",
         "proj4",
         "proj4js"
     ],
+    "replace": {
+        "proj4php/proj4php":"2.0.12"
+    },
     "homepage": "https://github.com/proj4php/proj4php",
     "authors": [
         {
