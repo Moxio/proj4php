@@ -9,6 +9,11 @@ class Wkt {
     private static $wktDatums = array();
 
     /**
+     * Allow spaces in WKT section parsing
+     */
+    private static $wktStrict = false;
+
+    /**
      *
      * returns an associative array of projection arguments from a wkt string
      */
@@ -352,6 +357,9 @@ class Wkt {
         $wktContent = $wktMatch[2];
         $wktTemp = explode(",", $wktContent);
 
+        if (!self::$wktStrict)
+           $wktTemp = array_map('trim',$wktTemp);
+
         $wktName = (strtoupper($wktObject) == "TOWGS84") ? "TOWGS84" : trim(array_shift($wktTemp), '"');
 
         $wktArray = array();
@@ -471,6 +479,7 @@ class Wkt {
         self::$wktProjections["Universal Transverse Mercator System"] = "utm";
 
         self::$wktProjections["Mollweide"] = 'moll'; //SR-ORG:7
+        self::$wktProjections["Albers"] = 'aea'; 
         self::$wktProjections["Albers_Conic_Equal_Area"] = 'aea'; //SR-ORG:10
         self::$wktProjections['Albers_conic_equal_area'] = 'aea'; //SR-ORG:6952
 
