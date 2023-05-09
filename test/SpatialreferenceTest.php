@@ -214,6 +214,7 @@ class SpatialreferenceTest extends TestCase
         'SR-ORG:8350', //proj4 lon_0=-5156... wkt central_meridian\",-90
         'SR-ORG:8358', // defines UNIT[\"metre\",1], but false_easting in radians.
         'SR-ORG:8389', //+lat_0=0  "latitude_of_origin\",39]
+        'SR-ORG:8553', //"Latitude_Of_Origin\",0.6895989606176568]
 
         'EPSG:21780', // wkt=omerc, proj4=somerc?
         'EPSG:21781', // ''
